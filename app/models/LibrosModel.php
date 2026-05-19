@@ -16,6 +16,12 @@ class LibrosModel
     $libros = $query->fetchAll(PDO::FETCH_OBJ);
     return $libros;
   }
+  public function obtenerLibrosOrdenados($campo, $orden){
+    $query = $this->db->prepare("SELECT * FROM libros ORDER BY $campo $orden");
+    $query->execute();
+    $libros = $query->fetchAll(PDO::FETCH_OBJ);
+    return $libros;
+  }
   public function obtenerLibroPorId($id)
   {
     $query = $this->db->prepare('SELECT * FROM libros WHERE id_libro = ?');
@@ -36,10 +42,11 @@ class LibrosModel
     return $query->rowCount();
   }
 
-  public function actualizarLibro($titulo, $sinopsis, $anio_de_publicacion, $disponible, $id_autor)
+  public function actualizarLibro($titulo, $sinopsis, $anio_de_publicacion, $disponible, $id_autor, $id_libro)
   {
-    $query = $this->db->prepare("UPDATE libros SET 'titulo' = ?, 'sinopsis' = ?, 'anio_de_publicacion' = ?, 'disponible' = ?, 'id_autor' = ?) values(?,?,?,?,?)");
-    $query->execute([$titulo, $sinopsis, $anio_de_publicacion, $disponible, $id_autor]);
+    $query = $this->db->prepare("UPDATE libros SET titulo = ?, sinopsis = ?, anio_de_publicacion = ?, disponible = ?, id_autor = ? WHERE id_libro = ?");
+    $query->execute([$titulo, $sinopsis, $anio_de_publicacion, $disponible, $id_autor, $id_libro]);
     return $query->rowCount();
   }
+
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-05-2026 a las 22:57:11
+-- Tiempo de generación: 18-05-2026 a las 17:40:26
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -40,16 +40,16 @@ CREATE TABLE `autores` (
 --
 
 INSERT INTO `autores` (`id_autor`, `nombre`, `fecha_de_nacimiento`, `nacionalidad`, `biografia`) VALUES
-(0, 'Gabriel García Márquez', '1927-03-06', 'Colombiano', 'Escritor y periodista colombiano, referente del realismo mágico y ganador del Premio Nobel de Literatura en 1982.'),
-(0, 'Jorge Luis Borges', '1899-08-24', 'Argentino', 'Escritor argentino reconocido mundialmente por sus cuentos, ensayos y poemas.'),
-(0, 'Julio Cortázar', '1914-08-26', 'Argentino', 'Novelista y cuentista argentino, autor destacado de la literatura latinoamericana.'),
-(0, 'Isabel Allende', '1942-08-02', 'Chilena', 'Escritora chilena reconocida por sus novelas históricas y realismo mágico.'),
-(0, 'Mario Vargas Llosa', '1936-03-28', 'Peruano', 'Novelista, ensayista y político peruano, Premio Nobel de Literatura 2010.'),
-(0, 'Stephen King', '1947-09-21', 'Estadounidense', 'Escritor estadounidense famoso por sus novelas de terror y suspenso.'),
-(0, 'J.K. Rowling', '1965-07-31', 'Británica', 'Autora británica conocida por la saga Harry Potter.'),
-(0, 'George Orwell', '1903-06-25', 'Británico', 'Escritor y periodista británico, autor de novelas distópicas.'),
-(0, 'Antoine de Saint-Exupéry', '1900-06-29', 'Francés', 'Escritor y aviador francés, autor de El Principito.'),
-(0, 'Paulo Coelho', '1947-08-24', 'Brasileño', 'Novelista brasileño conocido por obras espirituales y filosóficas.');
+(1, 'Gabriel García Márquez', '1927-03-06', 'Colombiano', 'Escritor y periodista colombiano, referente del realismo mágico y ganador del Premio Nobel de Literatura en 1982.'),
+(2, 'Jorge Luis Borges', '1899-08-24', 'Argentino', 'Escritor argentino reconocido mundialmente por sus cuentos, ensayos y poemas.'),
+(3, 'Julio Cortázar', '1914-08-26', 'Argentino', 'Novelista y cuentista argentino, autor destacado de la literatura latinoamericana.'),
+(4, 'Isabel Allende', '1942-08-02', 'Chilena', 'Escritora chilena reconocida por sus novelas históricas y realismo mágico.'),
+(5, 'Mario Vargas Llosa', '1936-03-28', 'Peruano', 'Novelista, ensayista y político peruano, Premio Nobel de Literatura 2010.'),
+(6, 'Stephen King', '1947-09-21', 'Estadounidense', 'Escritor estadounidense famoso por sus novelas de terror y suspenso.'),
+(7, 'J.K. Rowling', '1965-07-31', 'Británica', 'Autora británica conocida por la saga Harry Potter.'),
+(8, 'George Orwell', '1903-06-25', 'Británico', 'Escritor y periodista británico, autor de novelas distópicas.'),
+(9, 'Antoine de Saint-Exupéry', '1900-06-29', 'Francés', 'Escritor y aviador francés, autor de El Principito.'),
+(10, 'Paulo Coelho', '1947-08-24', 'Brasileño', 'Novelista brasileño conocido por obras espirituales y filosóficas.');
 
 -- --------------------------------------------------------
 
@@ -72,25 +72,25 @@ CREATE TABLE `libros` (
 --
 
 INSERT INTO `libros` (`id_libro`, `titulo`, `sinopsis`, `anio_de_publicacion`, `disponible`, `tapa_libro`, `id_autor`) VALUES
-(0, 'Cien años de soledad', 'Historia de la familia Buendía en el pueblo ficticio de Macondo.', '1967', 1, 'cien_anios.jpg', 1),
-(0, 'El amor en los tiempos del cólera', 'Historia de amor que perdura durante décadas.', '1985', 1, 'amor_colera.jpg', 1),
-(0, 'Ficciones', 'Colección de cuentos emblemáticos de Borges.', '1944', 1, 'ficciones.jpg', 2),
-(0, 'El Aleph', 'Libro de cuentos donde aparece el mítico Aleph.', '1949', 1, 'aleph.jpg', 2),
-(0, 'Rayuela', 'Novela experimental considerada una obra maestra.', '1963', 1, 'rayuela.jpg', 3),
-(0, 'Bestiario', 'Colección de cuentos fantásticos.', '1951', 1, 'bestiario.jpg', 3),
-(0, 'La casa de los espíritus', 'Saga familiar ambientada en Chile.', '1982', 1, 'casa_espiritus.jpg', 4),
-(0, 'Eva Luna', 'Historia de una joven narradora llena de imaginación.', '1987', 1, 'eva_luna.jpg', 4),
-(0, 'La ciudad y los perros', 'Crítica al sistema militar peruano.', '1963', 1, 'ciudad_perros.jpg', 5),
-(0, 'Conversación en La Catedral', 'Reflexión sobre la corrupción política.', '1969', 1, 'catedral.jpg', 5),
-(0, 'It', 'Un grupo de amigos enfrenta a una entidad maligna.', '1986', 1, 'it.jpg', 6),
-(0, 'El resplandor', 'Una familia vive sucesos aterradores en un hotel.', '1977', 1, 'resplandor.jpg', 6),
-(0, 'Harry Potter y la piedra filosofal', 'Inicio de la historia del joven mago.', '1997', 1, 'hp1.jpg', 7),
-(0, 'Harry Potter y la cámara secreta', 'Segundo año de Harry en Hogwarts.', '1998', 1, 'hp2.jpg', 7),
-(0, '1984', 'Sociedad totalitaria controlada por el Gran Hermano.', '1949', 1, '1984.jpg', 8),
-(0, 'Rebelión en la granja', 'Fábula política protagonizada por animales.', '1945', 1, 'granja.jpg', 8),
-(0, 'El Principito', 'Relato filosófico sobre la amistad y la vida.', '1943', 1, 'principito.jpg', 9),
-(0, 'El Alquimista', 'Viaje espiritual de un joven pastor.', '1988', 1, 'alquimista.jpg', 10),
-(0, 'Brida', 'Historia de una joven en búsqueda espiritual.', '1990', 1, 'brida.jpg', 10);
+(1, 'Cien años de soledad', 'Historia de la familia Buendía en el pueblo ficticio de Macondo.', '1967', 1, 'cien_anios.jpg', 1),
+(2, 'El amor en los tiempos del cólera', 'Historia de amor que perdura durante décadas.', '1985', 1, 'amor_colera.jpg', 1),
+(3, 'Ficciones', 'Colección de cuentos emblemáticos de Borges.', '1944', 1, 'ficciones.jpg', 2),
+(4, 'El Aleph', 'Libro de cuentos donde aparece el mítico Aleph.', '1949', 1, 'aleph.jpg', 2),
+(5, 'Rayuela', 'Novela experimental considerada una obra maestra.', '1963', 1, 'rayuela.jpg', 3),
+(6, 'Bestiario', 'Colección de cuentos fantásticos.', '1951', 1, 'bestiario.jpg', 3),
+(7, 'La casa de los espíritus', 'Saga familiar ambientada en Chile.', '1982', 1, 'casa_espiritus.jpg', 4),
+(8, 'Eva Luna', 'Historia de una joven narradora llena de imaginación.', '1987', 1, 'eva_luna.jpg', 4),
+(9, 'La ciudad y los perros', 'Crítica al sistema militar peruano.', '1963', 1, 'ciudad_perros.jpg', 5),
+(10, 'Conversación en La Catedral', 'Reflexión sobre la corrupción política.', '1969', 1, 'catedral.jpg', 5),
+(11, 'It', 'Un grupo de amigos enfrenta a una entidad maligna.', '1986', 1, 'it.jpg', 6),
+(12, 'El resplandor', 'Una familia vive sucesos aterradores en un hotel.', '1977', 1, 'resplandor.jpg', 6),
+(13, 'Harry Potter y la piedra filosofal', 'Inicio de la historia del joven mago.', '1997', 1, 'hp1.jpg', 7),
+(14, 'Harry Potter y la cámara secreta', 'Segundo año de Harry en Hogwarts.', '1998', 1, 'hp2.jpg', 7),
+(15, '1984', 'Sociedad totalitaria controlada por el Gran Hermano.', '1949', 1, '1984.jpg', 8),
+(16, 'Rebelión en la granja', 'Fábula política protagonizada por animales.', '1945', 1, 'granja.jpg', 8),
+(17, 'El Principito', 'Relato filosófico sobre la amistad y la vida.', '1943', 1, 'principito.jpg', 9),
+(18, 'El Alquimista', 'Viaje espiritual de un joven pastor.', '1988', 1, 'alquimista.jpg', 10),
+(19, 'Brida', 'Historia de una joven en búsqueda espiritual.', '1990', 1, 'brida.jpg', 10);
 
 -- --------------------------------------------------------
 
@@ -111,6 +111,38 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `usuario`, `contraseña`, `rol`) VALUES
 (0, 'webadmin', '$2a$12$UaF6iBv9jMdjNCZxT/GwweKfnZqT9A/tJMdPap0pz08hPZIRo9kIa', 'ADMIN');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `autores`
+--
+ALTER TABLE `autores`
+  ADD PRIMARY KEY (`id_autor`);
+
+--
+-- Indices de la tabla `libros`
+--
+ALTER TABLE `libros`
+  ADD PRIMARY KEY (`id_libro`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `autores`
+--
+ALTER TABLE `autores`
+  MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `libros`
+--
+ALTER TABLE `libros`
+  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
