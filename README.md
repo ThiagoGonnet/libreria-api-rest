@@ -28,7 +28,7 @@ Permite **listar, obtener, crear, actualizar y eliminar** issues mediante distin
 
 ## Endpoints
 
-- GET /api/issues — listar libros
-- GET /api/issues/:id — ver un libro
-- DELETE /api/issues/:id — eliminar libro
-- POST /api/issuess - agregar un libro
+- GET /api/libros — listar libros
+- GET /api/libros/:id — ver un libro
+- DELETE /api/libros/:id — eliminar libro
+- POST /api/libros - agregar un libro
