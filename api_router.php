@@ -13,5 +13,11 @@ $router->addRoute('libros/:id', 'DELETE', 'LibrosApiController', 'eliminarLibro'
 $router->addRoute('libros', 'POST', 'LibrosApiController', 'agregarLibro');
 $router->addRoute('libros/:id', 'PUT', 'LibrosApiController', 'actualizarLibro');
 
+$router->addRoute('autores', 'GET', 'AutorApiController', 'obtenerAutores');
+$router->addRoute('autores/:id', 'GET', 'AutorApiController', 'obtenerAutorPorId');
+$router->addRoute('autores/:id', 'DELETE', 'AutorApiController', 'eliminarAutor');
+$router->addRoute('autores', 'POST', 'AutorApiController', 'agregarAutor');
+$router->addRoute('autores/:id', 'PUT', 'AutorApiController', 'actualizarAutores');
+
 // rutea según recurso y método de la solicitud
 $router->route($_GET["resource"], $_SERVER['REQUEST_METHOD']);
